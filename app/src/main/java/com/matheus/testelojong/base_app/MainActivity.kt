@@ -1,7 +1,8 @@
-package com.matheus.testelojong
+package com.matheus.testelojong.base_app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.matheus.testelojong.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
