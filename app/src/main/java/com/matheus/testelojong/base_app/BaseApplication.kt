@@ -1,6 +1,7 @@
 package com.matheus.testelojong.base_app
 
 import android.app.Application
+import com.matheus.testelojong.base_app.common.di.commonModule
 import com.matheus.testelojong.feature.home.di.homeModule
 import com.matheus.testelojong.feature.meditation_board.di.meditationBoardModule
 import org.koin.android.ext.koin.androidContext
@@ -14,6 +15,7 @@ class BaseApplication : Application() {
         startKoin {
             modules(
                 homeModule +
+                        commonModule +
                         meditationBoardModule
             ).androidContext(applicationContext)
         }
