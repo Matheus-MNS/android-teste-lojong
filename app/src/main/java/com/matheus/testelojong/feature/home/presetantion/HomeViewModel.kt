@@ -36,7 +36,7 @@ class HomeViewModel(
                 response: Response<List<FactsResponse>>
             ) {
                 factsList.value = FactsMapper.toDomain(response.body())
-                //salvar no sharedPreferences
+                sharedPreferencesHelperHome.saveFactsOnPreferences(factsList.value?: emptyList(),"")
             }
         })
     }

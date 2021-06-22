@@ -33,6 +33,7 @@ class HomeFragment : Fragment() {
         setupView()
         handleObserver()
 
+
         binding.meditationBoardButton.setOnClickListener {
             findNavController().navigate(
                 HomeFragmentDirections.actionHomeFragmentToMeditationBoardFragment()
@@ -53,11 +54,12 @@ class HomeFragment : Fragment() {
 
     private fun validateList(factsModelList: List<FactsModel>?) {
 
-        val text = if (factsModelList.isNullOrEmpty()) {
-            "errou"
+         if (factsModelList.isNullOrEmpty()) {
+            Toast.makeText(context, R.string.failed_request, Toast.LENGTH_SHORT).show()
         } else {
-            "acertou"
+
+            Toast.makeText(context, R.string.success_request, Toast.LENGTH_SHORT).show()
         }
-        Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+
     }
 }
