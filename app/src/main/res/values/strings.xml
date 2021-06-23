@@ -2,6 +2,8 @@
     <string name="app_name">Teste Lojong</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button_text">Tabuleiro de meditação</string>
-    <string name="failed_request">Tabuleiro de meditação</string>
+    <string name="failed_request">erro ao fazer requisição</string>
     <string name="success_request">Api ok</string>
+    <string name="local_list">Local List</string>
+    <string name="remote_list">Remote List</string>
 </resources>

@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import com.matheus.testelojong.R
 import com.matheus.testelojong.base_app.extensions.changeStatusBarColor
 import com.matheus.testelojong.databinding.FragmentHomeBinding
-import com.matheus.testelojong.feature.home.domain.model.FactsModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment() {
@@ -46,20 +45,24 @@ class HomeFragment : Fragment() {
     }
 
     private fun handleObserver() {
-        val factsList = Observer<List<FactsModel>>(
-            ::validateList
+        val factsListStates = Observer(
+            ::validateFactsListStates
         )
-        viewModel.factsList.observe(viewLifecycleOwner, factsList)
+        viewModel.factsListStates.observe(viewLifecycleOwner, factsListStates)
     }
 
-    private fun validateList(factsModelList: List<FactsModel>?) {
+    private fun validateFactsListStates(factsListStates: Pair<Boolean, Boolean>) {
 
-         if (factsModelList.isNullOrEmpty()) {
-            Toast.makeText(context, R.string.failed_request, Toast.LENGTH_SHORT).show()
-        } else {
-
-            Toast.makeText(context, R.string.success_request, Toast.LENGTH_SHORT).show()
+        when {
+            factsListStates.first && !factsListStates.second -> {
+                Toast.makeText(context, R.string.local_list, Toast.LENGTH_SHORT).show()
+            }
+            !factsListStates.first && !factsListStates.second -> {
+                Toast.makeText(context, R.string.failed_request, Toast.LENGTH_SHORT).show()
+            }
+            !factsListStates.first && factsListStates.second -> {
+                Toast.makeText(context, R.string.success_request, Toast.LENGTH_SHORT).show()
+            }
         }
-
     }
 }

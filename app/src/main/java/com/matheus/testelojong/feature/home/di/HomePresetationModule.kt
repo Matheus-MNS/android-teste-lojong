@@ -7,8 +7,8 @@ import org.koin.dsl.module
 val homePresentationModule = module {
     viewModel {
         HomeViewModel(
-            sharedPreferencesHelperHome = get(),
-            factsDataSource = get()
+            factsRemoteDataSource = get(),
+            factsLocalDataSource = get()
         )
     }
 }

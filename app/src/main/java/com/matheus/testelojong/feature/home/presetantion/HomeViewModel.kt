@@ -2,8 +2,8 @@ package com.matheus.testelojong.feature.home.presetantion
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.matheus.testelojong.feature.home.data.local.SharedPreferencesHelperHome
-import com.matheus.testelojong.feature.home.data.remote.FactsDataSource
+import com.matheus.testelojong.feature.home.data.local.FactsLocalDataSource
+import com.matheus.testelojong.feature.home.data.remote.FactsRemoteDataSource
 import com.matheus.testelojong.feature.home.data.remote.mapper.FactsMapper
 import com.matheus.testelojong.feature.home.data.remote.model.FactsResponse
 import com.matheus.testelojong.feature.home.domain.model.FactsModel
@@ -12,32 +12,53 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class HomeViewModel(
-    private val sharedPreferencesHelperHome: SharedPreferencesHelperHome,
-    private val factsDataSource: FactsDataSource
+    private val factsRemoteDataSource: FactsRemoteDataSource,
+    private val factsLocalDataSource: FactsLocalDataSource
 ) : ViewModel() {
 
-    val factsList: MutableLiveData<List<FactsModel>> by lazy {
-        MutableLiveData<List<FactsModel>>()
+    private lateinit var factsList: List<FactsModel>
+
+    //First = isLocalList - Second = isRequestSuccess
+    val factsListStates: MutableLiveData<Pair<Boolean, Boolean>> by lazy {
+        MutableLiveData<Pair<Boolean, Boolean>>()
     }
 
     init {
-        getFacts()
+        getFactsList()
     }
 
-    private fun getFacts() {
-        val callback = factsDataSource.getFacts()
+    private fun getFactsList() {
+        val localFactsList = factsLocalDataSource.getFactsList()
+        if (localFactsList.isNullOrEmpty()) {
+            getFactsListRemotely()
+        } else {
+            factsList = localFactsList
+            factsListStates.value = Pair(first = true, second = false)
+        }
+    }
+
+    private fun getFactsListRemotely() {
+        val callback = factsRemoteDataSource.getFacts()
         callback.enqueue(object : Callback<List<FactsResponse>> {
             override fun onFailure(call: Call<List<FactsResponse>>, t: Throwable) {
-                factsList.value = emptyList()
+                factsListStates.value = Pair(first = false, second = false)
             }
 
             override fun onResponse(
                 call: Call<List<FactsResponse>>,
                 response: Response<List<FactsResponse>>
             ) {
-                factsList.value = FactsMapper.toDomain(response.body())
-                sharedPreferencesHelperHome.saveFactsOnPreferences(factsList.value?: emptyList(),"")
+                factsList = FactsMapper.toDomain(response.body())
+                factsListStates.value = Pair(first = false, second = true)
+                saveFactsListLocally(factsList)
             }
         })
     }
+
+    private fun saveFactsListLocally(factsList: List<FactsModel>?) {
+        if (!factsList.isNullOrEmpty()) {
+            factsLocalDataSource.saveFactsList(factsList)
+        }
+    }
 }
+
