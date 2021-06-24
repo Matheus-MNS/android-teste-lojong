@@ -1,14 +1,318 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_grass"
     tools:context=".feature.meditation_board.presetantion.MeditationBoardFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <View
+            android:id="@+id/c1"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="180dp"
+            android:background="@drawable/ic_rv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/buttonNumberOne"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="180dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_steph"
+            app:layout_constraintBottom_toBottomOf="@+id/c1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonNumberOneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/buttonNumberOne"
+            app:layout_constraintEnd_toEndOf="@id/buttonNumberOne"
+            app:layout_constraintStart_toStartOf="@id/buttonNumberOne"
+            app:layout_constraintTop_toTopOf="@+id/buttonNumberOne"
+            android:text="@string/buttonNumberOne_text" />
+
+        <View
+            android:id="@+id/c3"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="180dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_c2"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonNumberOne"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/c4"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="148dp"
+            android:background="@drawable/ic_c4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/c3" />
+
+        <View
+            android:id="@+id/buttonNumberTow"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="234dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_steph"
+            app:layout_constraintBottom_toBottomOf="@+id/c4"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonNumberTowText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/buttonNumberTow"
+            app:layout_constraintEnd_toEndOf="@id/buttonNumberTow"
+            app:layout_constraintStart_toStartOf="@id/buttonNumberTow"
+            app:layout_constraintTop_toTopOf="@+id/buttonNumberTow"
+            android:text="@string/buttonNumberTwo_text" />
+
+        <View
+            android:id="@+id/c6"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="234dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_c1"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonNumberTow"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/c7"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginBottom="296dp"
+            android:background="@drawable/ic_rh"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/c6" />
+
+        <View
+            android:id="@+id/c8"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginBottom="296dp"
+            android:background="@drawable/ic_c3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/c7" />
+
+        <View
+            android:id="@+id/c9"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="128dp"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/ic_rv"
+            app:layout_constraintBottom_toBottomOf="@+id/c8"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/c10"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="128dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_c2"
+            app:layout_constraintBottom_toBottomOf="@+id/c9"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/buttonNumberThree"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="146dp"
+            android:background="@drawable/ic_stepv"
+            app:layout_constraintBottom_toBottomOf="@id/c7"
+            app:layout_constraintEnd_toEndOf="@id/c10" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonNumberThreeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/buttonNumberThree"
+            app:layout_constraintEnd_toEndOf="@id/buttonNumberThree"
+            app:layout_constraintStart_toStartOf="@id/buttonNumberThree"
+            app:layout_constraintTop_toTopOf="@+id/buttonNumberThree"
+            android:text="@string/buttonNumberThree_text" />
+
+        <View
+            android:id="@+id/c12"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="146dp"
+            android:background="@drawable/ic_c4"
+            app:layout_constraintBottom_toTopOf="@id/buttonNumberTow"
+            app:layout_constraintEnd_toEndOf="@id/buttonNumberThree" />
+
+        <View
+            android:id="@+id/c13"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="234dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_rv"
+            app:layout_constraintBottom_toBottomOf="@id/c12"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/buttonNumberFour"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="234dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_steph"
+            app:layout_constraintBottom_toBottomOf="@id/c13"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonNumberFourText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/buttonNumberFour"
+            app:layout_constraintEnd_toEndOf="@id/buttonNumberFour"
+            app:layout_constraintStart_toStartOf="@id/buttonNumberFour"
+            app:layout_constraintTop_toTopOf="@+id/buttonNumberFour"
+            android:text="@string/buttonNumberFour_text" />
+
+        <View
+            android:id="@+id/c15"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="234dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_c2"
+            app:layout_constraintBottom_toBottomOf="@id/buttonNumberFour"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/c16"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="665dp"
+            android:background="@drawable/ic_c4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/c15" />
+
+        <View
+            android:id="@+id/buttonNumberFive"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="286dp"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/ic_steph"
+            app:layout_constraintBottom_toBottomOf="@id/c16"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonNumberFiveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/buttonNumberFive"
+            app:layout_constraintEnd_toEndOf="@id/buttonNumberFive"
+            app:layout_constraintStart_toStartOf="@id/buttonNumberFive"
+            app:layout_constraintTop_toTopOf="@+id/buttonNumberFive"
+            android:text="@string/buttonNumberFive_text" />
+
+        <View
+            android:id="@+id/c18"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="286dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_c1"
+            app:layout_constraintBottom_toBottomOf="@id/buttonNumberFive"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/c19"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginBottom="146dp"
+            android:background="@drawable/ic_rh"
+            app:layout_constraintBottom_toBottomOf="@id/c15"
+            app:layout_constraintStart_toStartOf="@id/c18" />
+
+        <View
+            android:id="@+id/c20"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginBottom="146dp"
+            android:background="@drawable/ic_c3"
+            app:layout_constraintBottom_toBottomOf="@id/c15"
+            app:layout_constraintStart_toStartOf="@id/c19" />
+
+        <View
+            android:id="@+id/c21"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="178dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_rv"
+            app:layout_constraintBottom_toBottomOf="@id/c20"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/c22"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="178dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_c2"
+            app:layout_constraintBottom_toBottomOf="@id/c21"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/c23"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_c4"
+            app:layout_constraintBottom_toBottomOf="@id/c21"
+            app:layout_constraintEnd_toEndOf="@id/c22" />
+
+        <View
+            android:id="@+id/c24"
+            android:layout_width="54dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="232dp"
+            android:layout_marginBottom="74dp"
+            android:background="@drawable/ic_rv"
+            app:layout_constraintBottom_toBottomOf="@id/c23"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

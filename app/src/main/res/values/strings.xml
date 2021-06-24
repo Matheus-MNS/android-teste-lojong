@@ -6,4 +6,9 @@
     <string name="success_request">Api ok</string>
     <string name="local_list">Local List</string>
     <string name="remote_list">Remote List</string>
+    <string name="buttonNumberOne_text">1</string>
+    <string name="buttonNumberTwo_text">2</string>
+    <string name="buttonNumberThree_text">3</string>
+    <string name="buttonNumberFour_text">4</string>
+    <string name="buttonNumberFive_text">5</string>
 </resources>

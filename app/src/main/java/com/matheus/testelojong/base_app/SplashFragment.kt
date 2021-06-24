@@ -32,6 +32,6 @@ class SplashFragment : Fragment() {
                 SplashFragmentDirections.actionSplashFragmentToHomeFragment()
 
             )
-        }, 2000)
+        }, 1000)
     }
 }
