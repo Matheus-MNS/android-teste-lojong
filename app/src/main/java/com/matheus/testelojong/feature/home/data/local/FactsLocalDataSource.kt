@@ -3,8 +3,8 @@ package com.matheus.testelojong.feature.home.data.local
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import com.matheus.testelojong.base_app.common.data.local.SharedPreferencesHelper
-import com.matheus.testelojong.feature.home.domain.model.FactsModel
+import com.matheus.testelojong.common.data.local.SharedPreferencesHelper
+import com.matheus.testelojong.feature.home.data.model.FactsModel
 
 const val FACTS_LIST = "factsList"
 

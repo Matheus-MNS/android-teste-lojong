@@ -1,8 +1,6 @@
-package com.matheus.testelojong.base_app.common.data.local
+package com.matheus.testelojong.common.data.local
 
 import android.content.Context
-import com.google.gson.GsonBuilder
-import com.matheus.testelojong.feature.home.domain.model.FactsModel
 
 const val SHARED_PREFERENCES = "sharedPreferences"
 

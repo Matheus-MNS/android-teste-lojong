@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.matheus.testelojong.databinding.FragmentSplashBinding
 
-
 class SplashFragment : Fragment() {
 
     private lateinit var binding: FragmentSplashBinding
@@ -30,7 +29,6 @@ class SplashFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(
                 SplashFragmentDirections.actionSplashFragmentToHomeFragment()
-
             )
         }, 1000)
     }

@@ -1,4 +1,4 @@
-package com.matheus.testelojong.base_app.common
+package com.matheus.testelojong.common
 
 import androidx.annotation.MainThread
 import androidx.lifecycle.LifecycleOwner

@@ -2,12 +2,11 @@ package com.matheus.testelojong.feature.home.presetantion
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.matheus.testelojong.base_app.common.ActionLiveData
 import com.matheus.testelojong.feature.home.data.local.FactsLocalDataSource
 import com.matheus.testelojong.feature.home.data.remote.FactsRemoteDataSource
 import com.matheus.testelojong.feature.home.data.remote.mapper.FactsMapper
 import com.matheus.testelojong.feature.home.data.remote.model.FactsResponse
-import com.matheus.testelojong.feature.home.domain.model.FactsModel
+import com.matheus.testelojong.feature.home.data.model.FactsModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

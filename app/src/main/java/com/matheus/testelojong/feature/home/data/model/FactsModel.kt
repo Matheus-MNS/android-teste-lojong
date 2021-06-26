@@ -1,4 +1,4 @@
-package com.matheus.testelojong.feature.home.domain.model
+package com.matheus.testelojong.feature.home.data.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

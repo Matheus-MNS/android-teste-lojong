@@ -1,7 +1,7 @@
 package com.matheus.testelojong.feature.home.di
 
-import com.matheus.testelojong.base_app.common.network.BASE_URL
-import com.matheus.testelojong.base_app.common.network.WebServiceFactory
+import com.matheus.testelojong.common.network.BASE_URL
+import com.matheus.testelojong.common.network.WebServiceFactory
 import com.matheus.testelojong.feature.home.data.local.FactsLocalDataSource
 import com.matheus.testelojong.feature.home.data.remote.FactsRemoteDataSource
 import com.matheus.testelojong.feature.home.data.remote.api.LojongService

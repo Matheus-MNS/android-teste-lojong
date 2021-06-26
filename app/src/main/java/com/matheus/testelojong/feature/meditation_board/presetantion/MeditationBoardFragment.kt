@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.navArgs
-import com.matheus.testelojong.base_app.extensions.showCustomToast
+import com.matheus.testelojong.common.extensions.showCustomToast
 import com.matheus.testelojong.databinding.FragmentMeditationBoardBinding
 
 class MeditationBoardFragment : Fragment() {

@@ -2,8 +2,8 @@ package com.matheus.testelojong.feature.home.data.remote.mapper
 
 import com.matheus.testelojong.feature.home.data.remote.model.FactsResponse
 import com.matheus.testelojong.feature.home.data.remote.model.StatusResponse
-import com.matheus.testelojong.feature.home.domain.model.FactsModel
-import com.matheus.testelojong.feature.home.domain.model.StatusModel
+import com.matheus.testelojong.feature.home.data.model.FactsModel
+import com.matheus.testelojong.feature.home.data.model.StatusModel
 
 object FactsMapper {
 

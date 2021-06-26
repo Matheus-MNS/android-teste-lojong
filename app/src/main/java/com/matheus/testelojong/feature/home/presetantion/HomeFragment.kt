@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.matheus.testelojong.R
-import com.matheus.testelojong.base_app.extensions.changeStatusBarColor
+import com.matheus.testelojong.common.extensions.changeStatusBarColor
 import com.matheus.testelojong.databinding.FragmentHomeBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

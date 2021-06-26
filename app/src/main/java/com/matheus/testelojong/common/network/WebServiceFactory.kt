@@ -1,4 +1,4 @@
-package com.matheus.testelojong.base_app.common.network
+package com.matheus.testelojong.common.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
