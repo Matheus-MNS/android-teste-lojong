@@ -32,10 +32,15 @@ class HomeFragment : Fragment() {
         setupView()
         handleObserver()
 
-
         binding.meditationBoardButton.setOnClickListener {
+            navigateToMeditationBoard()
+        }
+    }
+
+    private fun navigateToMeditationBoard() {
+        viewModel.factsList?.let {
             findNavController().navigate(
-                HomeFragmentDirections.actionHomeFragmentToMeditationBoardFragment()
+                HomeFragmentDirections.actionHomeFragmentToMeditationBoardFragment(it.toTypedArray())
             )
         }
     }

@@ -29,5 +29,9 @@
         android:id="@+id/meditationBoardFragment"
         android:name="com.matheus.testelojong.feature.meditation_board.presetantion.MeditationBoardFragment"
         android:label="fragment_meditation_board"
-        tools:layout="@layout/fragment_meditation_board" />
+        tools:layout="@layout/fragment_meditation_board" >
+        <argument
+            android:name="factsList"
+            app:argType="com.matheus.testelojong.feature.home.domain.model.FactsModel[]" />
+    </fragment>
 </navigation>

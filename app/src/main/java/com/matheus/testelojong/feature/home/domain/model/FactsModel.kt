@@ -1,5 +1,9 @@
 package com.matheus.testelojong.feature.home.domain.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class FactsModel(
     var status: StatusModel,
     var type: String,
@@ -12,5 +16,5 @@ data class FactsModel(
     var updatedAt: String,
     var createdAt: String,
     var used: Boolean
-)
+):Parcelable
 

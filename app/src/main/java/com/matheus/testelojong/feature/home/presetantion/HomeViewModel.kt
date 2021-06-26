@@ -2,6 +2,7 @@ package com.matheus.testelojong.feature.home.presetantion
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.matheus.testelojong.base_app.common.ActionLiveData
 import com.matheus.testelojong.feature.home.data.local.FactsLocalDataSource
 import com.matheus.testelojong.feature.home.data.remote.FactsRemoteDataSource
 import com.matheus.testelojong.feature.home.data.remote.mapper.FactsMapper
@@ -16,7 +17,7 @@ class HomeViewModel(
     private val factsLocalDataSource: FactsLocalDataSource
 ) : ViewModel() {
 
-    private lateinit var factsList: List<FactsModel>
+    var factsList = factsLocalDataSource.getFactsList()
 
     //First = isLocalList - Second = isRequestSuccess
     val factsListStates: MutableLiveData<Pair<Boolean, Boolean>> by lazy {
@@ -27,12 +28,11 @@ class HomeViewModel(
         getFactsList()
     }
 
+
     private fun getFactsList() {
-        val localFactsList = factsLocalDataSource.getFactsList()
-        if (localFactsList.isNullOrEmpty()) {
+        if (factsList.isNullOrEmpty()) {
             getFactsListRemotely()
         } else {
-            factsList = localFactsList
             factsListStates.value = Pair(first = true, second = false)
         }
     }

@@ -64,7 +64,7 @@
             app:layout_constraintEnd_toEndOf="@id/c3" />
 
         <View
-            android:id="@+id/buttonNumberTow"
+            android:id="@+id/button_number_two"
             android:layout_width="54dp"
             android:layout_height="74dp"
             android:layout_marginEnd="234dp"
@@ -79,10 +79,10 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@id/buttonNumberTow"
-            app:layout_constraintEnd_toEndOf="@id/buttonNumberTow"
-            app:layout_constraintStart_toStartOf="@id/buttonNumberTow"
-            app:layout_constraintTop_toTopOf="@+id/buttonNumberTow"
+            app:layout_constraintBottom_toBottomOf="@id/button_number_two"
+            app:layout_constraintEnd_toEndOf="@id/button_number_two"
+            app:layout_constraintStart_toStartOf="@id/button_number_two"
+            app:layout_constraintTop_toTopOf="@+id/button_number_two"
             android:text="@string/buttonNumberTwo_text" />
 
         <View
@@ -92,7 +92,7 @@
             android:layout_marginEnd="234dp"
             android:layout_marginBottom="74dp"
             android:background="@drawable/ic_c1"
-            app:layout_constraintBottom_toBottomOf="@+id/buttonNumberTow"
+            app:layout_constraintBottom_toBottomOf="@+id/button_number_two"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <View
@@ -164,7 +164,7 @@
             android:layout_marginEnd="54dp"
             android:layout_marginBottom="146dp"
             android:background="@drawable/ic_c4"
-            app:layout_constraintBottom_toTopOf="@id/buttonNumberTow"
+            app:layout_constraintBottom_toTopOf="@id/button_number_two"
             app:layout_constraintEnd_toEndOf="@id/buttonNumberThree" />
 
         <View
