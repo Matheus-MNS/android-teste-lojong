@@ -87,4 +87,8 @@ dependencies {
             strictly("1.4.1-native-mt")
         }
     }
+
+    // lottie
+    implementation "com.airbnb.android:lottie:$lottie_version"
+
 }

@@ -32,6 +32,6 @@
         tools:layout="@layout/fragment_meditation_board" >
         <argument
             android:name="factsList"
-            app:argType="com.matheus.testelojong.feature.home.domain.model.FactsModel[]" />
+            app:argType="com.matheus.testelojong.feature.home.data.model.FactsModel[]" />
     </fragment>
 </navigation>
