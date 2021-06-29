@@ -8,6 +8,6 @@ Retrofit library - Usada para implementação da transmissão de dados entre apl
 Gson library - Usada para a leitura dos arquivos Json enviados pela API;
 Lottie libary - Usada para a implementação das animações da view. 
 
-<img src="images/Splash.jpg" width="300" > <img src="images/HomeSreen.jpg" width="355" >
-<img src="images/MeditationBoardScreen.jpg" width="300" > <img src="images/MeditationBoardScreenToast.jpg" width="355" >
-<img src="images/MeditationBoardScreenToast02.jpg" width="300" > <img src="images/MeditationBoardScreenToast03.jpg" width="355" >
+<img src="images/Splash.jpg" width="300" > <img src="images/HomeScreen.jpg" width="300" >
+<img src="images/MeditationBoardScreen.jpg" width="300" > <img src="images/MeditationBoardScreenToast.jpg" width="300" >
+<img src="images/MeditationBoardScreenToast02.jpg" width="300" > <img src="images/MeditationBoardScreenToast03.jpg" width="300" >
