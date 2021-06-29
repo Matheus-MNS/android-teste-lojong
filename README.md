@@ -1,12 +1,12 @@
 # teste-app-lojong
 
-<h2>Foi densenvolvido usando a arquitetura MVVM, foram utilizado as bibliotecas abaixo:</h2>
-<h2>Koin Libary - Usada para implementar a injeção de dependencia;</h2>
-<h2>Navigation library - Usada na implementação dos componentes de navegação;</h2>
-<h2>Lifecycle library -  Usada para impementar a ViewModel/LiveData;</h2>
-<h2>Retrofit library - Usada para implementação da transmissão de dados entre aplicação e webservice;</h2>
-<h2>Gson library - Usada para a leitura dos arquivos Json enviados pela API;</h2>
-<h2>Lottie libary - Usada para a implementação das animações da view.</h2>
+<p>Foi densenvolvido usando a arquitetura MVVM, foram utilizado as bibliotecas abaixo:</p>
+<p>Koin Libary - Usada para implementar a injeção de dependencia;</p>
+<p>Navigation library - Usada na implementação dos componentes de navegação;</p>
+<p>Lifecycle library -  Usada para impementar a ViewModel/LiveData;</p>
+<p>Retrofit library - Usada para implementação da transmissão de dados entre aplicação e webservice;</p>
+<p>Gson library - Usada para a leitura dos arquivos Json enviados pela API;</p>
+<p>Lottie libary - Usada para a implementação das animações da view.</p>
 
 <img src="images/Splash.jpg" width="300" > <img src="images/HomeScreen.jpg" width="300" >
 <img src="images/MeditationBoardScreen.jpg" width="300" > <img src="images/MeditationBoardScreenToast.jpg" width="300" >
