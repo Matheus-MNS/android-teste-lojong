@@ -7,6 +7,9 @@
 <p>Retrofit library - Usada para implementação da transmissão de dados entre aplicação e webservice;</p>
 <p>Gson library - Usada para a leitura dos arquivos Json enviados pela API;</p>
 <p>Lottie libary - Usada para a implementação das animações da view.</p>
+<p>Foi usado o Shared Preference pois nunca usei o Room, para esse primeiro momento o uso do Shared Preference atendia o proposto</p>
+
+
 
 <img src="images/Splash.jpg" width="300" > <img src="images/HomeScreen.jpg" width="300" >
 <img src="images/MeditationBoardScreen.jpg" width="300" > <img src="images/MeditationBoardScreenToast.jpg" width="300" >
