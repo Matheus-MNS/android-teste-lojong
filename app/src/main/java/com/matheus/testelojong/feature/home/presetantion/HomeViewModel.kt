@@ -17,6 +17,8 @@ class HomeViewModel(
 ) : ViewModel() {
 
     var factsList = factsLocalDataSource.getFactsList()
+    var currentDate = factsLocalDataSource.getCurrentDate()
+
 
     //First = isLocalList - Second = isRequestSuccess
     val factsListStates: MutableLiveData<Pair<Boolean, Boolean>> by lazy {
@@ -29,7 +31,7 @@ class HomeViewModel(
 
 
     private fun getFactsList() {
-        if (factsList.isNullOrEmpty()) {
+        if (isDayFirstRequest() ) {
             getFactsListRemotely()
         } else {
             factsListStates.value = Pair(first = true, second = false)
@@ -50,6 +52,7 @@ class HomeViewModel(
                 factsList = FactsMapper.toDomain(response.body())
                 factsListStates.value = Pair(first = false, second = true)
                 saveFactsListLocally(factsList)
+                factsLocalDataSource.saveRequestDate(currentDate)
             }
         })
     }
@@ -59,5 +62,8 @@ class HomeViewModel(
             factsLocalDataSource.saveFactsList(factsList)
         }
     }
+
+    private fun isDayFirstRequest(): Boolean =
+        currentDate != factsLocalDataSource.getLastRequestDate()
 }
 

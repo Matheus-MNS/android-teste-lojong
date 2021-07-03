@@ -5,8 +5,12 @@ import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import com.matheus.testelojong.common.data.local.SharedPreferencesHelper
 import com.matheus.testelojong.feature.home.data.model.FactsModel
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 const val FACTS_LIST = "factsList"
+const val REQUEST_DATE = "requestDate"
 
 class FactsLocalDataSource(
     private val sharedPreferencesHelper: SharedPreferencesHelper
@@ -28,4 +32,20 @@ class FactsLocalDataSource(
             Gson().fromJson(value, type)
         }
     }
+
+    fun getCurrentDate(): String {
+        val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        return dateFormat.format(Calendar.getInstance().time)
+    }
+
+    fun saveRequestDate(date: String) {
+        sharedPreferencesHelper.saveString(
+            REQUEST_DATE,
+            date
+        )
+    }
+
+    fun getLastRequestDate() = sharedPreferencesHelper.getString(REQUEST_DATE)
+
+
 }
